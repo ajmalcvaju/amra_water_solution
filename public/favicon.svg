@@ -1,0 +1,29 @@
+<svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="leafGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="60%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0C4A6E" />
+    </linearGradient>
+    <linearGradient id="waveGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#082F49" />
+      <stop offset="50%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" stroke="url(#leafGrad)" stroke-width="4" stroke-linecap="round" stroke-dasharray="210 80" />
+  <path d="M 50 8 C 65 8, 82 18, 86 34 C 76 36, 62 30, 56 22 C 54 18, 52 12, 50 8 Z" fill="url(#leafGrad)" />
+  <path d="M 56 26 C 56 26, 44 42, 44 51 C 44 57.6 49.4 63 56 63 C 62.6 63, 68 57.6, 68 51 C 68 42, 56 26, 56 26 Z" fill="url(#dropGrad)" />
+  <circle cx="53" cy="46" r="2.5" fill="#FFFFFF" opacity="0.8" />
+  <path d="M 12 56 C 22 46, 36 68, 52 58 C 66 50, 78 64, 88 56 C 88 64, 82 82, 70 88 C 54 94, 28 92, 16 80 C 12 74, 11 65, 12 56 Z" fill="url(#waveGrad2)" />
+  <path d="M 15 62 C 26 52, 40 70, 56 61 C 68 54, 78 64, 85 58 C 82 72, 74 84, 60 88 C 45 92, 26 88, 17 78 C 15 72, 14 67, 15 62 Z" fill="url(#waveGrad1)" opacity="0.9" />
+  <path d="M 20 68 C 30 60, 42 74, 58 66 C 68 61, 74 68, 80 64 C 76 75, 68 83, 56 86 C 44 89, 28 85, 20 68 Z" fill="#38BDF8" opacity="0.5" />
+</svg>
