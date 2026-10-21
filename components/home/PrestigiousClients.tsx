@@ -142,8 +142,8 @@ export function PrestigiousClients() {
             </p>
           </div>
 
-          {/* Slider Arrow Controls */}
-          <div className="flex items-center justify-center md:justify-end gap-3 shrink-0">
+          {/* Slider Arrow Controls - Hidden on mobile view */}
+          <div className="hidden md:flex items-center justify-end gap-3 shrink-0">
             <button
               onClick={prevSlide}
               aria-label="Previous client"

@@ -165,7 +165,7 @@ export const solutionsData: SolutionCategory[] = [
     id: "stp-etp-plants",
     title: "STP & ETP Wastewater Treatment Plants",
     shortDesc:
-      "Sewage and Effluent Treatment Plants ensuring Kerala Pollution Control Board (KSPCB) compliance, odor control, and eco-friendly water reuse.",
+      "As highlighted in our company portfolio, Amra Water Solution designs, installs, and commissions Sewage Treatment Plants (STP) and Effluent Treatment Plants (ETP). We help residential societies, commercial complexes, resorts, and industrial manufacturers treat wastewater effectively, control odors, meet stringent statutory discharge norms, and recycle treated water for toilet flushing and landscape irrigation.",
     fullDesc:
       "As highlighted in our company portfolio, Amra Water Solution designs, installs, and commissions Sewage Treatment Plants (STP) and Effluent Treatment Plants (ETP). We help residential societies, commercial complexes, resorts, and industrial manufacturers treat wastewater effectively, control odors, meet stringent statutory discharge norms, and recycle treated water for toilet flushing and landscape irrigation.",
     image: "/images/solutions/stp-plant.jpg",

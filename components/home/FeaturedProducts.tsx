@@ -12,9 +12,9 @@ import { WhatsAppIcon } from "@/components/shared/WhatsAppIcon";
 
 const FEATURED_PRODUCT_IDS = [
   "zerob-hydrolife-alkaline-ionizer",
-  "flonix-100-ltr-commercial-ro",
-  "ss-150150-gnc-water-cooler",
-  "sewage-treatment-plant",
+  "modular-sewage-treatment-plant",
+  "effluent-treatment-plant",
+  "industrial-ro-plant",
 ];
 
 export function FeaturedProducts() {

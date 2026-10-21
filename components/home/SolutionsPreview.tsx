@@ -5,8 +5,17 @@ import { ArrowRight, CheckCircle, Sparkles } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { solutionsData } from "@/data/solutions";
 
+const PREVIEW_SOLUTION_IDS = [
+  "residential-water-purification",
+  "commercial-ro-water-treatment",
+  "industrial-ro-plants",
+  "stp-etp-plants",
+];
+
 export function SolutionsPreview() {
-  const previewSolutions = solutionsData.slice(0, 4);
+  const previewSolutions = PREVIEW_SOLUTION_IDS.map((id) =>
+    solutionsData.find((item) => item.id === id)
+  ).filter((item): item is (typeof solutionsData)[0] => Boolean(item));
 
   return (
     <section className="py-20 bg-white relative">
@@ -48,9 +57,15 @@ export function SolutionsPreview() {
                     {/* Badge on image */}
                     <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs">
                       <span className="font-semibold bg-sky-950/80 px-3 py-1.5 rounded-lg backdrop-blur-md border border-white/20">
-                        {item.targetApplications[0]}
+                        {item.id === "stp-etp-plants"
+                          ? "Amra Water Solution Engineering"
+                          : item.targetApplications[0]}
                       </span>
-                      <span className="text-cyan-300 font-medium">Tested & Engineered</span>
+                      <span className="text-cyan-300 font-medium">
+                        {item.id === "stp-etp-plants"
+                          ? "Custom Sizing & Water Quality Guarantee"
+                          : "Tested & Engineered"}
+                      </span>
                     </div>
                   </div>
                 </div>
