@@ -14,6 +14,7 @@ import {
   Factory,
 } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { PrestigiousClients } from "@/components/home/PrestigiousClients";
 
 export const metadata: Metadata = {
   title: "About Us | Water Purification & Treatment Engineering",
@@ -255,7 +256,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. Design & Engineering Section */}
+      {/* 5. Prestigious Clients Section */}
+      <PrestigiousClients />
+
+      {/* 6. Design & Engineering Section */}
       <section className="py-20 bg-[#082F49] text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

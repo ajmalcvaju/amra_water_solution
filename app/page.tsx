@@ -3,6 +3,7 @@ import { HeroSlider } from "@/components/home/HeroSlider";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { SolutionsPreview } from "@/components/home/SolutionsPreview";
+import { PrestigiousClients } from "@/components/home/PrestigiousClients";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { HowItWorks } from "@/components/home/HowItWorks";
 import { BniTrustBanner } from "@/components/home/BniTrustBanner";
@@ -23,7 +24,10 @@ export default function HomePage() {
       {/* 4. Solutions overview */}
       <SolutionsPreview />
 
-      {/* 5. Why choose Amra Water Solution? */}
+      {/* 5. Prestigious Clients slidable section */}
+      <PrestigiousClients />
+
+      {/* 6. Why choose Amra Water Solution? */}
       <WhyChooseUs />
 
       {/* 6. How it works (4-step process) */}
