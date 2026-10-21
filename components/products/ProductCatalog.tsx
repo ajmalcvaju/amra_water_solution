@@ -10,18 +10,27 @@ import { Product, ProductCategory } from "@/lib/types";
 
 const categories: { label: string; value: ProductCategory }[] = [
   { label: "All Products", value: "All" },
-  { label: "Water Purifiers", value: "Water Purifiers" },
-  { label: "Water Dispensers", value: "Water Dispensers" },
-  { label: "Water Coolers", value: "Water Coolers" },
+  { label: "STP / ETP Plants", value: "STP / ETP Plants" },
   { label: "RO Treatment Plants", value: "RO Treatment Plants" },
   { label: "Water Treatment Plants", value: "Water Treatment Plants" },
-  { label: "STP / ETP Plants", value: "STP / ETP Plants" },
+  { label: "Water Purifiers", value: "Water Purifiers" },
+  { label: "Water Coolers", value: "Water Coolers" },
+  { label: "Water Dispensers", value: "Water Dispensers" },
   { label: "Commercial RO", value: "Commercial RO" },
   { label: "Industrial Treatment", value: "Industrial Treatment" },
   { label: "Filtration Systems", value: "Filtration" },
   { label: "Water Softening", value: "Water Softening" },
   { label: "Other Solutions", value: "Other Solutions" },
 ];
+
+const CATEGORY_PRIORITY: Record<string, number> = {
+  "STP / ETP Plants": 1,
+  "RO Treatment Plants": 2,
+  "Water Treatment Plants": 3,
+  "Water Purifiers": 4,
+  "Water Coolers": 5,
+  "Water Dispensers": 6,
+};
 
 function ProductCatalogInner() {
   const searchParams = useSearchParams();
@@ -63,9 +72,9 @@ function ProductCatalogInner() {
   const [searchQuery, setSearchQuery] = useState("");
   const [modalProduct, setModalProduct] = useState<Product | null>(initialProduct);
 
-  // Filtered Products
+  // Filtered Products with category priority (STP/ETP first, RO Treatment Plants 2nd, Water Treatment Plants 3rd)
   const filteredProducts = useMemo(() => {
-    return productsData.filter((product) => {
+    const list = productsData.filter((product) => {
       const matchesCategory =
         selectedCategory === "All" || product.category === selectedCategory;
 
@@ -81,6 +90,12 @@ function ProductCatalogInner() {
         product.features.some((feat) => feat.toLowerCase().includes(q));
 
       return matchesCategory && matchesSearch;
+    });
+
+    return list.slice().sort((a, b) => {
+      const prioA = CATEGORY_PRIORITY[a.category] || 99;
+      const prioB = CATEGORY_PRIORITY[b.category] || 99;
+      return prioA - prioB;
     });
   }, [selectedCategory, searchQuery]);
 

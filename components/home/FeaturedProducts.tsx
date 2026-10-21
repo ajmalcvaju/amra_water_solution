@@ -11,7 +11,7 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/shared/Motio
 import { WhatsAppIcon } from "@/components/shared/WhatsAppIcon";
 
 const FEATURED_PRODUCT_IDS = [
-  "zerob-hydrolife-alkaline-ionizer",
+  "sewage-treatment-plant",
   "modular-sewage-treatment-plant",
   "effluent-treatment-plant",
   "industrial-ro-plant",
